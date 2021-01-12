@@ -1,6 +1,7 @@
 from bottle import route, run, template, static_file, request
 from JUKIBot_text.markovGen.generateText import *
 import os
+print("server start")
 
 @route('/')
 def index():
