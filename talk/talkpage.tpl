@@ -2,6 +2,7 @@
 % from JUKIBot_text.markovGen.generateText import *
 % import sqlite3
 % import random
+% from talk.db import *
 <html>
 	<head>
 		<title>ほぼじゅき</title>
@@ -177,7 +178,6 @@
 			except:
 				message = ""
 			end
-			print(message)
 			reply = ""
 			if message != "" and message != None:
 				mk = markov("./JUKIBot_text/databases/JUKI.db",N=3)
@@ -185,6 +185,11 @@
 				if reply == "":
 					reply = random.choice(["わからん。","うん。","ふーん。","なにそれ。","笑","わかる"])
 				end
+			end
+			talk = talkDB("./talk.db")
+			talk.create()
+			if message != None and message != "":
+				talk.insert(message,reply)
 			end
 			%>
 			<!-- ▼LINE風 ここから -->
@@ -195,10 +200,11 @@
 				</div>
 				<!-- ▼会話エリア scrollを外すと高さ固定解除 -->
 				<div class="line__contents scroll">
-					<!-- 自分の吹き出し -->
+					<%
+					messages = '''<!-- 自分の吹き出し -->
 					<div class="line__right">
-						<div class="text">{{message}}</div>
-						<span class="date">既読<br>0:30</span>
+						<div class="text">{message}</div>
+						<span class="date">既読</span>
 					</div>
 					<!-- 相手の吹き出し -->
 					<div class="line__left">
@@ -207,9 +213,17 @@
 					</figure>
 					<div class="line__left-text">
 						<div class="name">ほぼじゅき</div>
-							<div class="text">{{reply}}</div>
+							<div class="text">{reply}</div>
 						</div>
-					</div>
+					</div>'''
+					out = ""
+					
+						for mr in reversed(list(talk.get_latest(10))):
+							out += messages.format(message=mr[1],reply=mr[2])
+						end
+					
+					%>
+					{{!out}}
 				</div>
 				<!--　▲会話エリア ここまで -->
 			<div style="text-align : center ; background : white; padding : 5px;">
@@ -220,6 +234,10 @@
 			</div>
 			</div>
 			<!--　▲LINE風 ここまで -->
-
+			<script type="text/javascript">
+				let t = document.querySelector(".line__contents.scroll");
+				let s = -1, h = t.clientHeight;
+				while(s !== t.scrollTop){ s = t.scrollTop, t.scrollTop = s + h; }
+			</script>
 	</body>
 </html>
