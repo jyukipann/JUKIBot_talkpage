@@ -1,1 +1,1 @@
-discordbot: python main.py
+hobojuki: python main.py
