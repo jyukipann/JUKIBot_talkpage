@@ -8,8 +8,8 @@ def index():
 def hello():
 	return template('Hello {{string}}', string = 'World')
 
-@route('/talkpage', method='post')
-def start():
+@route('/talk',  method=["GET", "POST"])
+def talkpage():
 	return template('./talk/talkpage.tpl', request)
 
 run(host = 'localhost', port = 8080, debug = True, reload = True)
