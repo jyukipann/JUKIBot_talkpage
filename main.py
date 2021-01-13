@@ -3,6 +3,7 @@ from JUKIBot_text.markovGen.generateText import *
 import os
 print("server start")
 
+@route('/index.html')
 @route('/')
 def index():
 	return static_file('index.html', root = '.')
@@ -15,5 +16,9 @@ def hello():
 def talkpage():
 	return template('./talk/talkpage.tpl', request)
 
-#run(host = 'localhost', port = 8080, debug = True, reload = True)
-run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug = True, reload = True)
+@route("/style")
+def style():
+	return static_file('./talk/style.css', root = '.')
+
+run(host = 'localhost', port = 8080, debug = True, reload = True)
+#run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug = True, reload = True)
