@@ -7,7 +7,6 @@ body{
 }
 div#center {
 	width: 450px;
-	height: 800px;
 	text-align: left;
 	margin: auto;
 }
@@ -43,7 +42,7 @@ div#center {
 }
 
 .line__container .scroll {
-	height: 70vh;
+	height: 60vh;
 	overflow-y: scroll;
 }
 
