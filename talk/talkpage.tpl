@@ -17,7 +17,6 @@
 				width: 450px;
 				height: 800px;
 				text-align: left;
-				
 				margin: auto;
 			}
 			
@@ -52,7 +51,7 @@
 			}
 
 			.line__container .scroll {
-				height: 700px;
+				height: 600px;
 				overflow-y: scroll;
 			}
 
