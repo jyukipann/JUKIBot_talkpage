@@ -167,13 +167,13 @@ max-width:150px;
 }
 
 .message_input{
-	width: 60%;
+	width: 50%;
 	box-sizing: border-box;
 	font-size: 20px;
 }
 
 .send_button{
-	width: 15%;
+	width: 20%;
 	background-color:#5785e3;
 	font-size: 20px;
 }
