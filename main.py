@@ -20,5 +20,5 @@ def talkpage():
 def style():
 	return static_file('./talk/style.css', root = '.')
 
-#run(host = 'localhost', port = 8080, debug = True, reload = True)
-run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug = True, reload = True)
+run(host = 'localhost', port = 8080, debug = True, reload = True)
+#run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug = True, reload = True)

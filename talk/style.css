@@ -176,4 +176,11 @@ max-width:150px;
 	width: 20%;
 	background-color:#5785e3;
 	font-size: 20px;
+	display: inline-block;
+	color: #ffffff;
+	border-radius: 5px;
+	background-color: #0099ff;
+	border: none;
+	cursor: pointer;
+	text-align: center;
 }
