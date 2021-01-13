@@ -173,9 +173,10 @@ max-width:150px;
 }
 
 .send_button{
-	width: 20%;
+	width: 30%;
 	background-color:#5785e3;
 	font-size: 20px;
+	text-align: left;
 	display: inline-block;
 	color: #ffffff;
 	border-radius: 5px;

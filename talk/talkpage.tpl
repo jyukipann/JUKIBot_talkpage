@@ -78,7 +78,7 @@
 					{{!out}}
 				</div>
 				<!--　▲会話エリア ここまで -->
-			<div style="text-align : center ; background : white; padding : 5px;">
+			<div style="text-align : center ; background : white;padding: 1px">
 			<form id="talk" action="/talk" method="post">
 				<input type="text" name="message" class="message_input">
 				<input type="submit" value="send" class="send_button">
