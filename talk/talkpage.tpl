@@ -6,10 +6,12 @@
 <html>
 	<head>
 		<title>ほぼじゅき</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<style>
 			body{
 				text-align: center;
 				background: #bbbbbb;
+				-webkit-text-size-adjust: 100%;
 			}
 			div#center {
 				width: 450px;
@@ -18,6 +20,7 @@
 				
 				margin: auto;
 			}
+			
 			/*/////////////////////////////////////////////////
 			//LINE風チャット画面(会話方式)を記事に表示する方法
 			/////////////////////////////////////////////////*/
