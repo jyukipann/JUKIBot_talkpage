@@ -18,8 +18,8 @@ div#center {
 	padding:0;
 	background: #7494c0;
 	overflow: hidden;
-	max-width: 500px;
-	margin: 20px auto;
+	max-width: 600px;
+	margin: 2px auto;
 	font-size: 80%;
 	border: 4px solid #333333;
 	border-radius: 10px;
@@ -167,10 +167,13 @@ max-width:150px;
 }
 
 .message_input{
-	width: 87%;
+	width: 60%;
+	box-sizing: border-box;
+	font-size: 20px;
 }
 
 .send_button{
-	width: 10%;
+	width: 15%;
 	background-color:#5785e3;
+	font-size: 20px;
 }

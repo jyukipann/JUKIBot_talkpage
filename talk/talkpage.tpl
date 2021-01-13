@@ -92,7 +92,7 @@
 				while(s !== t.scrollTop){ s = t.scrollTop, t.scrollTop = s + h; }
 			</script>
 			
-			<p>
+			<p style="margin:1;">
 			<a href="/">説明ページ</a><br>
 			</p>
 			</div>
