@@ -7,7 +7,7 @@
 	<head>
 		<title>ほぼじゅき</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="./talk/style.css">
+		<link rel="stylesheet" type="text/css" href="/style">
 		
 		<script>
 			// 最初に、ビューポートの高さを取得し、0.01を掛けて1%の値を算出して、vh単位の値を取得
