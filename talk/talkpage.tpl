@@ -32,14 +32,11 @@
 			end
 			reply = ""
 			if message != "" and message != None:
-				mk = markov("./JUKIBot_text/databases/JUKI.db",N=3)
 				reply = mk.generateReply(message)
 				if reply == "":
 					reply = random.choice(["わからん。","うん。","ふーん。","なにそれ。","笑","わかる"])
 				end
 			end
-			talk = talkDB("./talk.db")
-			talk.create()
 			if message != None and message != "":
 				talk.insert(message,reply)
 			end

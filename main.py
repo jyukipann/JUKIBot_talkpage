@@ -14,7 +14,10 @@ def hello():
 
 @route('/talk',  method=["GET", "POST"])
 def talkpage():
-	return template('./talk/talkpage.tpl', request)
+	mk = markov("./JUKIBot_text/databases/JUKI.db",N=3)
+	talk = talkDB("./talk.db")
+	talk.create()
+	return template('./talk/talkpage.tpl', request, mk=mk, talk=talk)
 
 @route("/style")
 def style():
