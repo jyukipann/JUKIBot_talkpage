@@ -1,6 +1,7 @@
 from bottle import route, run, template, static_file, request
 from JUKIBot_text.markovGen.generateText import *
 import os
+from talk.db import *
 print("server start")
 
 @route('/index.html')
